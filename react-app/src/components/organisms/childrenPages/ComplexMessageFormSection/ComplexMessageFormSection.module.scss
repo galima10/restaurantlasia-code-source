@@ -1,0 +1,38 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+
+.complexMessageFormSection {
+  background: linear-gradient(rgba(33, 28, 38, 0.25) 10%, $primary-color),
+    linear-gradient(rgba(124, 26, 59, 0.85)),
+    var(--background-image)
+      $bg-img-char;
+  color: $primary-color;
+  padding: 5rem spaceHCalc(1.5rem, 10rem, 20rem);
+  display: flex;
+  gap: 1.5rem;
+  .textContainer,
+  form {
+    width: 50%;
+  }
+
+  span {
+    color: $secondary-color-2;
+    display: inline-block;
+  }
+  label {
+    opacity: 0.75;
+  }
+  p {
+    margin-top: 2rem;
+  }
+  @include responsive {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem spaceHCalc(1.5rem, 5rem, 10rem);
+    .textContainer,
+    form {
+      width: 100%;
+    }
+  }
+}

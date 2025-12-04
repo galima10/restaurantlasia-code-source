@@ -1,0 +1,101 @@
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.flagShipProductsModuleSection {
+  @extend %relative-container;
+  @include color-curve-bottom;
+  background: linear-gradient(rgba(255, 252, 240, 0) 60%, rgb(255, 252, 240)),
+    linear-gradient(rgba(124, 26, 59, 0.85)),
+    var(--background-image) $bg-img-char;
+
+  p {
+    text-align: center;
+  }
+  hgroup {
+    p {
+      padding: 0 spaceHCalc(0.5rem, 17rem, 22rem);
+      color: $primary-color;
+    }
+  }
+}
+
+.cta {
+  margin: 1.5rem auto 3.5rem;
+}
+
+.flagshipDishes {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 28rem;
+  border-radius: 2rem 0 2rem 0;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  div {
+    display: flex;
+    overflow: hidden;
+    img {
+      height: 50%;
+    }
+  }
+  div:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column-reverse;
+  }
+  div:nth-of-type(2) {
+    grid-column: 3;
+    grid-row: 1;
+    flex-direction: column;
+  }
+  div:nth-of-type(3) {
+    grid-column: 4;
+    grid-row: 1;
+    flex-direction: column-reverse;
+  }
+  .imageDecoration {
+    grid-row: 1;
+    grid-column: 2;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+  @include responsive {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.8fr;
+    height: 36rem;
+    border-radius: 0;
+    gap: 1rem 0;
+    div:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1;
+      border-radius: 1.5rem 0 0 0;
+    }
+    div:nth-of-type(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    div:nth-of-type(3) {
+      grid-column: 3;
+      grid-row: 1;
+      border-radius: 0 0 1.5rem 0;
+    }
+    .imageDecoration {
+      grid-row: 2;
+      grid-column: 1 / span 3;
+      border-radius: 1.5rem 0 1.5rem 0;
+      overflow: hidden;
+      height: 100%;
+      img {
+        height: 200%;
+      }
+    }
+  }
+}

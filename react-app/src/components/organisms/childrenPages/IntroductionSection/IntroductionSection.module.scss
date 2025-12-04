@@ -1,0 +1,12 @@
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+@use "@styles/partials/variables" as *;
+
+.introductionSectionDisposition1 {
+  @extend %introductionSection;
+  @include introductionSection("disposition1");
+}
+.introductionSectionDisposition2 {
+  @extend %introductionSection;
+  @include introductionSection("disposition2");
+}

@@ -1,0 +1,23 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+
+.faqSection {
+  background-color: $secondary-color-1;
+}
+
+.faqList {
+  margin: 5rem auto;
+  li {
+    padding-left: spaceHCalc(0rem, 5rem, 10rem);
+    padding-right: spaceHCalc(0rem, 5rem, 10rem);
+    margin: 0 auto;
+  }
+}
+
+.noQuestions {
+  font-size: 1.2rem;
+  color: $primary-color;
+  font-weight: 700;
+  text-align: center;
+}

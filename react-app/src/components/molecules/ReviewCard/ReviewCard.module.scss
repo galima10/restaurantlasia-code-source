@@ -1,0 +1,10 @@
+@use "@styles/partials/placeholders" as *;
+
+.whiteCard {
+  @extend %reviewBloc;
+  background-color: white;
+}
+
+.goldenCard {
+  @extend %goldenCard;
+}

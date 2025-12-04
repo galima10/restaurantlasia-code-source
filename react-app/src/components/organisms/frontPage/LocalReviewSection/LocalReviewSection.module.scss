@@ -1,0 +1,44 @@
+@use "@styles/partials/placeholders" as *;
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+
+.localReviewSection {
+  background: linear-gradient(#f4cde1 25%, #f4cde100), $secondary-color-1;
+  padding-bottom: 10rem;
+  hgroup {
+    text-align: center;
+    p {
+      padding: 0 spaceHCalc(0rem, 10rem, 25rem);
+    }
+  }
+}
+
+.noReviews {
+  font-size: 1.2rem;
+  color: $primary-color;
+  font-weight: 700;
+}
+
+.cta {
+  margin: 2rem auto 4rem;
+}
+
+.reviewsList {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  li {
+    max-width: calc(100% / 3);
+    width: calc(100% / 3);
+    height: 13rem;
+  }
+  @include responsive {
+    flex-direction: column;
+    align-items: center;
+    li {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

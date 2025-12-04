@@ -1,0 +1,7 @@
+@function type-scale($step, $ratio, $base: 1rem) {
+  @return $base * pow($ratio, $step);
+}
+
+@function spaceHCalc($min, $preferred, $max) {
+  @return clamp($min, calc(100vw - calc(79rem - #{$preferred})), $max);
+}

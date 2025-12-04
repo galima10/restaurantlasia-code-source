@@ -1,0 +1,194 @@
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/functions" as *;
+
+.productImagesSection {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(rgba(141, 57, 85, 0.85), #fffcf0 55%),
+    var(--background-image)
+      $bg-img-char;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    @include responsive {
+      transform: rotate(-90deg);
+    }
+  }
+  ul {
+    display: flex;
+  }
+  @include responsive {
+    width: 100vw;
+    height: 52.5rem;
+  }
+}
+
+.imagesContainer {
+  width: 75rem;
+  height: 75rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  @include responsive {
+    width: 60rem;
+    height: 60rem;
+  }
+}
+
+.carrousel {
+  position: relative;
+  width: 100%;
+  height: 19rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  overflow: hidden;
+  @include responsive {
+    height: 16rem;
+  }
+}
+
+.imageList {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+
+  li {
+    width: 15rem;
+    height: 15rem;
+    flex-shrink: 0;
+    position: absolute;
+    border-radius: 2rem 0 2rem 0;
+    overflow: hidden;
+    @include responsive {
+      width: 12rem;
+      height: 12rem;
+    }
+  }
+  li:nth-of-type(1) {
+    transform: translateY(-200%);
+  }
+  li:nth-of-type(2) {
+    transform: translateY(-141.5%) translateX(141.5%) rotate(45deg);
+  }
+  li:nth-of-type(3) {
+    transform: translateX(200%) rotate(90deg);
+  }
+  li:nth-of-type(4) {
+    transform: translateX(141.5%) translateY(141.5%) rotate(135deg);
+  }
+  li:nth-of-type(5) {
+    transform: translateY(200%) rotate(180deg);
+  }
+  li:nth-of-type(6) {
+    transform: translateX(-141.5%) translateY(141.5%) rotate(225deg);
+  }
+  li:nth-of-type(7) {
+    transform: translateX(-200%) rotate(270deg);
+  }
+  li:nth-of-type(8) {
+    transform: translateX(-141.5%) translateY(-141.5%) rotate(315deg);
+  }
+}
+
+.carrouselButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  ul {
+    margin: 0 3rem;
+  }
+  li {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    button {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: $accent-color;
+      opacity: 0.25;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    &:hover {
+      button {
+        opacity: 1;
+      }
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include responsive {
+    ul {
+      margin: 0 0.75rem;
+    }
+    li {
+      padding: 0.75rem 0.75rem;
+    }
+  }
+}
+
+.navButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    path {
+      fill: $secondary-color-1;
+      transition: fill 0.3s ease, opacity 0.3s ease;
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        fill: $accent-color;
+      }
+    }
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+  &:disabled {
+    pointer-events: none;
+    svg {
+      path {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.activeButton {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+.carrouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  @include responsive {
+    gap: 0;
+    transform: rotate(-90deg) scale(-1);
+    height: 100vw;
+    width: 52.5rem;
+    padding-top: 1.5rem;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+}

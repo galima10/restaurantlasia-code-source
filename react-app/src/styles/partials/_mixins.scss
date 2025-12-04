@@ -1,0 +1,173 @@
+@use "variables" as *;
+@use "functions" as *;
+
+// Mixin pour les styles responsives
+@mixin responsive($breakpoint: $bp-mobile) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Mixin pour calculer les tailles de police en fonction de l'échelle typographique
+@mixin fluid-type($step) {
+  // Desktop
+  font-size: type-scale($step, $desktop-font-ratio);
+
+  // Mobile
+  @include responsive($bp-mobile) {
+    font-size: type-scale($step, $mobile-font-ratio);
+  }
+}
+
+// Mixin spécifique pour calculer les tailles des titres h1
+@mixin fluid-h1-type {
+  font-size: type-scale(6, $desktop-h1-font-ratio);
+
+  @include responsive($bp-mobile) {
+    font-size: type-scale(6, $mobile-h1-font-ratio);
+  }
+}
+
+// Mixin pour les boutons
+@mixin button($type) {
+  @if $type == "primary" {
+    background-color: $accent-color;
+    color: $primary-color;
+    border-color: $accent-color;
+    &:hover {
+      background-color: $secondary-color-2;
+      color: $tertiary-color;
+      border-color: $secondary-color-2;
+    }
+  } @else if $type == "secondary" {
+    background-color: transparent;
+    color: $accent-color;
+    border-color: $accent-color;
+    &:hover {
+      color: $secondary-color-1;
+      border-color: $secondary-color-1;
+    }
+  } @else if $type == "tertiary" {
+    color: $accent-color;
+    text-decoration: underline;
+    border-color: transparent;
+    padding: 0.5rem;
+    &:hover {
+      color: $secondary-color-2;
+    }
+  } @else if $type == "menu" {
+    background-color: transparent;
+    color: $tertiary-color;
+    border-color: transparent;
+    padding: 0.5rem;
+    &:hover {
+      color: $secondary-color-1;
+    }
+  } @else if $type == "menu-disabled" {
+    color: $accent-color;
+    border-color: transparent;
+    padding: 0.5rem;
+    cursor: not-allowed;
+    pointer-events: none;
+    position: relative;
+    &::after {
+      content: "";
+      border-bottom: 0.125em solid $accent-color;
+      position: absolute;
+      width: calc(100% - 1rem);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0.25rem;
+    }
+  }
+}
+
+@mixin introductionSection($type: "disposition1") {
+  @if $type == "disposition1" {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10rem 10rem;
+    p:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    p:nth-of-type(2) {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    img:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    img:nth-of-type(2) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+  } @else if $type == "disposition2" {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10rem 10rem 10rem;
+    p:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    p:nth-of-type(2) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    img:nth-of-type(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    img:nth-of-type(2) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    img:nth-of-type(3) {
+      grid-column: 2;
+      grid-row: 1 / span 3;
+    }
+  }
+  @include responsive {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 10rem 10rem;
+    p:nth-of-type(1) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    p:nth-of-type(2) {
+      grid-row: 3;
+      grid-column: 1;
+    }
+    img:nth-of-type(2) {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
+}
+
+@mixin color-curve-bottom($color: $primary-color) {
+  &::after {
+    @extend %curve;
+    background-color: $color;
+    bottom: -1.85rem;
+    border-bottom-left-radius: 120% 5rem;
+    border-bottom-right-radius: 120% 5rem;
+    @include responsive {
+      border-bottom-left-radius: 120% 2rem;
+      border-bottom-right-radius: 120% 2rem;
+    }
+  }
+}
+
+@mixin color-curve-top($color: $primary-color) {
+  &::before {
+    @extend %curve;
+    background-color: $color;
+    top: -1.85rem;
+    border-top-left-radius: 120% 5rem;
+    border-top-right-radius: 120% 5rem;
+    @include responsive {
+      border-top-left-radius: 120% 2rem;
+      border-top-right-radius: 120% 2rem;
+    }
+  }
+}

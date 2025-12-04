@@ -1,0 +1,25 @@
+@use "partials/mixins" as *;
+@use "partials/variables" as *;
+
+.curve-bottom {
+  border-bottom-left-radius: 120% 5rem;
+  border-bottom-right-radius: 120% 5rem;
+  margin-bottom: -2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  @include responsive {
+    border-bottom-left-radius: 120% 2rem;
+    border-bottom-right-radius: 120% 2rem;
+  }
+}
+
+.shadow {
+  filter: $drop-shadow;
+}
+
+.normalBloc {
+  padding-top: 4rem;
+  position: relative;
+  z-index: 0;
+}

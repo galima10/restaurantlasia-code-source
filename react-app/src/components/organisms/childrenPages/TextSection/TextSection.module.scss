@@ -1,0 +1,14 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+
+.textSection {
+  text-align: center;
+  padding: 2rem $paddingHorizontal;
+  @extend %relative-container;
+  @include color-curve-bottom($primary-color);
+  p {
+    padding: 1.5rem spaceHCalc(0rem, 10rem, 15rem);
+  }
+}

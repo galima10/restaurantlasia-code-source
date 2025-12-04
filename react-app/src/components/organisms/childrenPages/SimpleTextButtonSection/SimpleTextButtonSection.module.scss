@@ -1,0 +1,15 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/functions" as *;
+
+.simpleTextButtonSection {
+  background-color: $primary-color;
+  padding: 4rem $paddingHorizontal 5rem;
+  text-align: center;
+  p {
+    padding: 0 spaceHCalc(0rem, 14rem, 22rem);
+  }
+}
+
+.cta {
+  margin: 2rem auto;
+}

@@ -1,0 +1,48 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+
+.productPreviewElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 11rem;
+  gap: 1rem;
+  transition: opacity 0.3s ease;
+  line-height: 1.5;
+  margin: 2rem 1.5rem 0.5rem;
+  padding: 1rem;
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+  &:hover {
+    opacity: 0.85;
+    .moreInfo {
+      color: $secondary-color-2;
+    }
+  }
+}
+
+.moreInfo {
+  @include fluid-type(0);
+  font-family: $body-font-family;
+  font-weight: 700;
+  @extend %button;
+  @include button("tertiary");
+  pointer-events: none;
+  margin: 0 auto;
+}
+
+.name {
+  @include fluid-type(1);
+  font-weight: 700;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}

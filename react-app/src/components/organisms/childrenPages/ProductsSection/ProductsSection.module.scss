@@ -1,0 +1,18 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+
+.productsSection {
+  background-color: $primary-color;
+  padding: 4rem 0;
+  @extend %relative-container;
+  @include color-curve-top;
+  @include color-curve-bottom;
+}
+
+.noProducts {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 2rem 0;
+}

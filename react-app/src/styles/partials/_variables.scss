@@ -1,0 +1,30 @@
+@use "functions" as *;
+
+$primary-color: #fffcf0;
+$secondary-color-1: #7c1a3b;
+$secondary-color-2: #f4cde1;
+$tertiary-color: #211c26;
+$accent-color: #ea5e76;
+
+$gradient-pink-white: linear-gradient($primary-color, $secondary-color-2);
+
+$h1-font-family: "Parisienne", serif;
+$title-font-family: "Dancing Script", sans-serif;
+$body-font-family: "Yaldevi", sans-serif;
+
+$bp-mobile: 768px;
+
+$desktop-font-ratio: 1.2;
+$mobile-font-ratio: 1.125;
+
+$desktop-h1-font-ratio: 1.25;
+$mobile-h1-font-ratio: 1.2;
+
+$paddingHorizontal: spaceHCalc(1.5rem, 8.5rem, 19rem);
+
+$bg-img-char: no-repeat center/cover;
+
+$drop-shadow: drop-shadow(-4px 4px 1rem rgba(0, 0, 0, 0.25));
+
+$aThirteenth: calc(100% / 13);
+$aFourteenth: calc(100% / 14);

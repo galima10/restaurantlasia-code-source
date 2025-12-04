@@ -1,0 +1,29 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/placeholders" as *;
+
+.localReviewsListSection {
+  background-color: $primary-color;
+  padding-left: 0;
+  padding-right: 0;
+  @extend %relative-container;
+  @include color-curve-bottom;
+}
+
+.reviewList {
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  width: calc(100vw - spaceHCalc(0rem, 15rem, 25rem));
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 30rem;
+  overflow-y: auto;
+}
+
+.noReviews {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto;
+}

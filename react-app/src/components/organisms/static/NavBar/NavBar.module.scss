@@ -1,0 +1,142 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+
+.navbar {
+  background-color: $primary-color;
+  width: 100%;
+  height: 5rem;
+  padding: 0 $paddingHorizontal;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+  width: 100%;
+  @include responsive {
+    position: absolute;
+    top: 0;
+    right: -80%;
+    transition: right 0.5s ease;
+    &.menu-open {
+      right: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background-color: $primary-color;
+    width: 80%;
+    height: 100vh;
+  }
+}
+
+.closeMenuButton {
+  display: none;
+  button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0.9rem;
+    right: 1.5rem;
+    div {
+      position: absolute;
+      width: 100%;
+      height: 0.25rem;
+      background-color: $accent-color;
+      border-radius: 10px 0 10px 0;
+    }
+    div:first-child {
+      transform: rotate(45deg);
+    }
+    div:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+  @include responsive {
+    display: block;
+  }
+}
+
+.navMobile {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    div {
+      width: 100%;
+      height: 0.25rem;
+      background-color: $accent-color;
+      border-radius: 10px 0 10px 0;
+    }
+  }
+  @include responsive {
+    display: flex;
+  }
+}
+
+.logo {
+  width: 12rem;
+  height: 4rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include responsive {
+    width: 10rem;
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.favicon {
+  width: 4rem;
+  height: 4rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.darkFilter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  display: none;
+  &.menu-open {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  @include responsive {
+    display: block;
+  }
+}

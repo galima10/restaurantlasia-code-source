@@ -1,0 +1,99 @@
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/variables" as *;
+
+.hero {
+  background: linear-gradient(
+      90deg,
+      rgb(255, 252, 240) 35%,
+      rgba(255, 252, 240, 0)
+    ),
+    linear-gradient(rgba(244, 205, 225, 0.5), rgba(244, 205, 225, 0.5)),
+    var(--background-image) $bg-img-char;
+  background-color: $primary-color;
+  display: grid;
+  grid-template-columns: 0.7fr 0.5fr 1fr;
+
+  h1 {
+    grid-column: 1 / span 3;
+  }
+  ul {
+    grid-column: 1;
+    margin: 1rem 0 6.5rem;
+  }
+  @include responsive {
+    background: linear-gradient(180deg, #fffcf0 35%, #fffcf000),
+      linear-gradient(rgba(244, 205, 225, 0.5), rgba(244, 205, 225, 0.5)),
+      var(--background-image) $bg-img-char;
+    display: block;
+  }
+}
+
+.cta {
+  grid-column: 1;
+  margin: 1.5rem 0;
+  @include responsive {
+    margin: 1rem auto;
+  }
+}
+
+.restaurantImage {
+  grid-column: 2;
+  max-width: 100%;
+  width: 100%;
+  grid-row: 2 / span 2;
+  height: 100%;
+  border-radius: 2rem 0 2rem 0;
+  margin: 0 1rem;
+  @include responsive {
+    max-width: 40%;
+    height: 11rem;
+    margin: -6rem 0 2.5rem 8.5rem;
+    border-radius: 1.5rem 0 1.5rem 0;
+  }
+}
+
+.productImage {
+  flex-shrink: 0;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  @include responsive {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.productHighlight {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-left: 3rem;
+  div {
+    width: 100%;
+    position: relative;
+  }
+  p {
+    margin-bottom: 1rem;
+    width: 125%;
+  }
+  strong {
+    @include fluid-type(2);
+    font-weight: 700;
+  }
+  @include responsive {
+    display: block;
+    margin-top: -9rem;
+    padding: 0;
+
+    p {
+      width: initial;
+      margin-left: 7rem;
+      margin-top: -2rem;
+    }
+    .button {
+      margin: 4rem auto 0;
+    }
+  }
+}
