@@ -8,7 +8,6 @@
 │   ├── childrenPages/
 │   │   ├── complex-four-images/
 │   │   │   ├── block.json
-│   │   │   ├── edit.jsx
 │   │   │   └── render.php
 │   │   ├── complex-message-form/
 │   │   ├── complex-triple-images/
@@ -32,13 +31,6 @@
 │       ├── reservation/
 │       ├── simple-image-text/
 │       └── two-images-text/
-├── blocks-editor/
-│   ├── src/
-│   │   └── index.js
-│   ├── .gitignore
-│   ├── package-lock.json
-│   ├── package.json
-│   └── vite.config.js
 ├── dist/
 │   ├── editor/
 │   │   └── index.js
@@ -61,41 +53,6 @@
 │   ├── remove-cpt-articles.php
 │   ├── setup.php
 │   └── templates.php
-├── react-app/
-│   ├── dist/
-│   │   └── tsconfig.tsbuildinfo
-│   ├── src/
-│   │   ├── assets/
-│   │   │   ├── fonts/
-│   │   │   │   ├── DancingScript/
-│   │   │   │   ├── Parisienne/
-│   │   │   │   └── Yaldevi/
-│   │   │   └── images/
-│   │   │       └── fallback.webp
-│   │   ├── components/
-│   │   │   ├── atoms/
-│   │   │   ├── molecules/
-│   │   │   └── organisms/
-│   │   ├── hooks/
-│   │   ├── styles/
-│   │   │   ├── partials/
-│   │   │   │   ├── _functions.scss
-│   │   │   │   ├── _mixins.scss
-│   │   │   │   ├── _placeholders.scss
-│   │   │   │   └── _variables.scss
-│   │   │   ├── _reset.scss
-│   │   │   ├── _theme.scss
-│   │   │   ├── _utils.scss
-│   │   │   └── main.scss
-│   │   ├── global.d.ts
-│   │   ├── main.tsx
-│   ├── .gitignore
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── vite.config.js
 ├── footer.php
 ├── front-page.php
 ├── functions.php
