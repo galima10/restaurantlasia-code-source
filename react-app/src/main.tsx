@@ -122,9 +122,6 @@ components.forEach(({ id, component }) => {
       // Clone le composant pour injecter les props datas
       const componentWithProps = React.cloneElement(component, { datas });
 
-      console.log("RAW datasAttr:", datasAttr);
-      console.log("PARSED datas:", datas);
-
       createRoot(container).render(
         <StrictMode>{componentWithProps}</StrictMode>
       );
