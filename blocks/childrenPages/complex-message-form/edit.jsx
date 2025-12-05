@@ -89,7 +89,7 @@ export default function EditComplexMessageForm({ attributes, setAttributes }) {
   return (
     <div {...useBlockProps()} style={blockStyles}>
       <h2 style={h2Styles}>
-        Formulaire de message pour le livre d'or avec paragraphes
+        Formulaire du livre d’or
       </h2>
 
       {/* Champ Paragraphe 1 */}

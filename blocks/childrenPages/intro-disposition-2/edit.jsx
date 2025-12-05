@@ -94,7 +94,7 @@ export default function EditIntroDisposition2({ attributes, setAttributes }) {
   return (
     <div {...useBlockProps()} style={blockStyles}>
       <h2 style={h2Styles}>
-        Bloc de texte avec une disposition bento à 4 images
+        Disposition à 4 images avec paragraphes
       </h2>
 
       {/* Champ Paragraphe 1 */}

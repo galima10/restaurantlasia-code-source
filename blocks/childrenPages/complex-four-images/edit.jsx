@@ -139,8 +139,7 @@ export default function EditComplexFourImages({ attributes, setAttributes }) {
 
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Disposition à 4 images avec paragraphes</h2>
-      <img src="./preview.jpg" alt="Aperçu du bloc" />
+      <h2 style={h2Styles}>Groupe de 3 images avec image seule et paragraphes</h2>
 
       {/* Champ Titre */}
       <TextControl

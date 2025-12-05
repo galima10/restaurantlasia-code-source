@@ -120,7 +120,7 @@ export default function EditSimpleImageText({ attributes, setAttributes }) {
 
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Affichage des informations globales avec image</h2>
+      <h2 style={h2Styles}>Informations globales</h2>
 
       {/* Champ Titre */}
       <TextControl

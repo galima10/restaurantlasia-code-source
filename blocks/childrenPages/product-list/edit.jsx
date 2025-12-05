@@ -15,7 +15,7 @@ const blockStyles = {
 export default function EditProductList({ attributes, setAttributes }) {
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Affichage de la liste des produits</h2>
+      <h2 style={h2Styles}>Liste des produits</h2>
     </div>
   );
 }

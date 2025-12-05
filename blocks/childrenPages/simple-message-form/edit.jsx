@@ -42,7 +42,7 @@ export default function EditSimpleMessageForm({ attributes, setAttributes }) {
 
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Formulaire de message pour contacter</h2>
+      <h2 style={h2Styles}>Formulaire de contact</h2>
 
       {/* Champ Titre */}
       <TextControl

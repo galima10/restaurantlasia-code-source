@@ -159,7 +159,7 @@ export default function EditTwoImagesText({ attributes, setAttributes }) {
 
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Texte avec deux images</h2>
+      <h2 style={h2Styles}>Texte avec 2 images</h2>
 
       {/* Champ Titre */}
       <TextControl

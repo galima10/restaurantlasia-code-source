@@ -28,7 +28,7 @@ import EditFlagshipProductsModule from "../../blocks/general/flagship-products-m
 
 // Enregistrement des blocs Gutenberg pour l'interface d'édition
 registerBlockType("theme/complex-four-images", {
-  title: "Disposition à 4 images avec paragraphes",
+  title: "Groupe de 3 images avec image seule et paragraphes",
   category: "children-pages",
   attributes: {
     datas: {
@@ -54,7 +54,7 @@ registerBlockType("theme/complex-four-images", {
 });
 
 registerBlockType("theme/complex-message-form", {
-  title: "Formulaire de message pour le livre d'or avec paragraphes",
+  title: "Formulaire du livre d’or",
   category: "children-pages",
   attributes: {
     datas: {
@@ -135,7 +135,7 @@ registerBlockType("theme/flagship-product", {
 });
 
 registerBlockType("theme/intro-disposition-1", {
-  title: "Bloc de texte avec une disposition bento à 3 images",
+  title: "Disposition à 3 images avec paragraphes",
   category: "children-pages",
   attributes: {
     datas: {
@@ -151,7 +151,7 @@ registerBlockType("theme/intro-disposition-1", {
 });
 
 registerBlockType("theme/intro-disposition-2", {
-  title: "Bloc de texte avec une disposition bento à 4 images",
+  title: "Disposition à 4 images avec paragraphes",
   category: "children-pages",
   attributes: {
     datas: {
@@ -167,7 +167,7 @@ registerBlockType("theme/intro-disposition-2", {
 });
 
 registerBlockType("theme/simple-message-form", {
-  title: "Formulaire de message pour contacter",
+  title: "Formulaire de contact",
   category: "children-pages",
   attributes: {
     datas: {
@@ -249,7 +249,7 @@ registerBlockType("theme/local-reviews-list", {
 });
 
 registerBlockType("theme/product-list", {
-  title: "Affichage de la liste des produits",
+  title: "Liste des produits",
   category: "children-pages",
   attributes: {
     datas: {
@@ -335,7 +335,7 @@ registerBlockType("theme/google-reviews", {
 });
 
 registerBlockType("theme/two-images-text", {
-  title: "Texte avec deux images",
+  title: "Texte avec 2 images",
   category: "general",
   attributes: {
     datas: {
@@ -354,7 +354,7 @@ registerBlockType("theme/two-images-text", {
 });
 
 registerBlockType("theme/simple-image-text", {
-  title: "Affichage des informations globales avec image",
+  title: "Informations globales",
   category: "general",
   attributes: {
     datas: {
@@ -371,7 +371,7 @@ registerBlockType("theme/simple-image-text", {
 });
 
 registerBlockType("theme/reservation", {
-  title: "Formulaire de réservation (physique et en ligne)",
+  title: "Formulaire de réservation",
   category: "general",
   attributes: {
     datas: {

@@ -129,7 +129,7 @@ export default function EditReservation({ attributes, setAttributes }) {
 
   return (
     <div {...useBlockProps()} style={blockStyles}>
-      <h2 style={h2Styles}>Formulaire de réservation (physique et en ligne)</h2>
+      <h2 style={h2Styles}>Formulaire de réservation</h2>
       {/* Champ Titre */}
       <TextControl
         label="Titre"
