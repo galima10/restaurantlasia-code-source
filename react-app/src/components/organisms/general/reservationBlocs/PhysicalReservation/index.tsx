@@ -39,7 +39,7 @@ export default function PhysicalReservation({
       <h3>Nos horaires</h3>
       <p>{openingDay || "Horaires non disponibles"}</p>
       <h3>Notre adresse</h3>
-      <p>{globalInfo?.address || "Addresse non disponible"}</p>
+      <p>{globalInfo?.address || "Adresse non disponible"}</p>
       <h3>Notre numéro</h3>
       <p>{globalInfo?.phoneNumber || "Numéro non disponible"}</p>
     </section>
