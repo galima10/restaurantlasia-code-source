@@ -21,5 +21,5 @@
   },
   "editorScript": "theme-editor",
   "supports": { "multiple": true },
-  "allowedPostTypes": ["page", "front-page", "product" ]
+  "allowedPostTypes": ["page", "front-page"]
 }
