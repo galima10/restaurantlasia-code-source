@@ -41,8 +41,14 @@ get_header(); // Load header.php logic in our file
         $datas['imageHighlighted'] = $imageHighlighted;
         $datas['backgroundImage'] = $imageHighlighted['src'];
 
-        // Récupère la description et le prix du produit
-        $datas['description'] = wp_strip_all_tags(get_the_content());
+        // Récupère la description des paragraphes du produit
+        $blocks = parse_blocks(get_the_content());
+        $paragraph_texts = array_map(function ($block) {
+            return isset($block['blockName']) && $block['blockName'] === 'core/paragraph' ? wp_strip_all_tags($block['innerHTML']) : '';
+        }, $blocks);
+        $datas['description'] = implode("\n", array_filter($paragraph_texts));
+
+        // Récupère le prix du produit
         $price = get_field('price', get_the_ID());
         $datas['price'] = $price ? number_format((float)$price, 2, '.', '') : null;
 

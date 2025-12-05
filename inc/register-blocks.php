@@ -80,6 +80,7 @@ add_filter('allowed_block_types_all', function ($allowed_blocks, $editor_context
         if ($editor_context->post->post_type === 'product') {
             return [
                 'core/paragraph',
+                'theme/reservation',
             ];
         }
 
