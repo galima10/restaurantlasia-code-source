@@ -16,7 +16,7 @@ add_action('admin_menu', function () {
     );
 });
 
-
+// Callback pour afficher le contenu de la page de réglages
 function theme_render_global_settings_page()
 {
 ?>
